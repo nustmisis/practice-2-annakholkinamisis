@@ -56,6 +56,6 @@ for idx, ch in enumerate(lst):
                 count += 1
             else:
                 break
-print(lst)
+
 print(count)
 
