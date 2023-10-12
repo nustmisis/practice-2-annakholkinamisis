@@ -9,8 +9,8 @@
 
 L = [1, 2, 4, 8, 16, 32, 64]
 X = 5
-found = False
 i = 0
+found = False
 while not found and i < len(L) :
     if 2 ** X == L[i] :
         found = True
@@ -22,8 +22,46 @@ if found:
 else:
     print(X, 'not found')
     
-    
-    
+"""
+a)
+# """
+while i < len(L):
+    if 2 ** X == L[i]:
+        print('at index', i)
+        break
+    elif i == len(L) - 1:
+        print(X, 'not found')
+        break
+    else:
+        i += 1
+
+"""
+б)
+"""
+for elem in L:
+    if 2 ** X == elem:
+        print('at index', L.index(elem))
+        break
+    elif L.index(elem) == len(L) - 1:
+        print(X, 'not found')
+        break
+    else:
+        continue
+
+"""
+в)
+"""
+if 2 ** X in L:
+    print('at index', L.index(2 ** X))
+else:
+    print(X, 'not found')
+
+"""
+г) - формулировка задачи не ясна. д) - да, т.к. уменьшится число вызовов функции умножения. е) опять же непонятно, что именно нужно генерировать
+"""
+
+
+
 '''
 Код явно написан с использование альетрнативной логики.
 Попоробуйте оптимизировать код c использование рекомендаций, ониявляются не обезатальными, но помогут понять основные ошибки.

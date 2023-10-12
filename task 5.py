@@ -42,3 +42,20 @@ bbbacacac, на это уйдёт 9 ходов, ниже указаны стро
 @author: workk
 """
 
+count = 1
+s = 'аbrahcabe'
+b = 'b'
+lst = list(s)
+for idx, ch in enumerate(lst):
+    if ch == b and idx == 0:
+        continue
+    if ch == b:
+        for i in reversed(range(idx+1)):
+            if i-1 >= 0 and lst[i-1] != b:
+                lst[i-1], lst[i] = lst[i], lst[i-1]
+                count += 1
+            else:
+                break
+print(lst)
+print(count)
+

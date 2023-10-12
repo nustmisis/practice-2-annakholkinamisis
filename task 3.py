@@ -16,3 +16,15 @@ Created on Fri Sep 22 15:05:53 2023
 это в сообщении
 """
 
+sign = str(input())
+
+def define_format(s):
+    if len(s) == 6 and s[-3:].isdigit() and s[:3].isupper():
+        print('Old format')
+    elif len(s) == 7 and s[:4].isdigit() and s[-3:].isupper():
+        print('New format')
+    else:
+        print('Invalid format')
+
+
+define_format(sign)
